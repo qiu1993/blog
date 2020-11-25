@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=false" />
+    <title>ali-test</title>
+  </head>
+  <body>
+    <div style="
+    background: aqua;
+    width: 42vw;
+    height: 20vh;
+    line-height: 20vh;
+    text-align: center;
+    border-radius: 10px;
+" onclick="aliCall()">点击我模拟ali调用</div>
+    <script>
+      function aliCall () {
+        window.webkit.messageHandlers.Share.postMessage({
+          eventName: "shareInApp",
+          url: 'https://www.baidu.com/'
+        });
+      }
+    </script>
+  </body>
+</html>
